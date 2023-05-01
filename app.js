@@ -18,7 +18,7 @@ let suma = primerProducto + segundoProducto;
 
 alert(suma);
 
-alert("Elegí los días que deseas entrenar");
+alert("¿Que día se te complica entrenar?");
 let dias = prompt(`
 1:Lunes
 2:Martes
@@ -63,3 +63,15 @@ switch (dias) {
 }
 
 alert(dias);
+
+let dia = prompt(`Ingresa día de entrenamiento`);
+let dia2 = prompt(`Ingresa otro día de entrenamiento`);
+let dia3 = prompt(`Agrega otro día de entrenamiento o sino coloca un "0"`);
+
+if (dia != "" && dia2 != "" && dia3 != "") {
+  let Entrenar = "1) " + dia + " " + "2) " + dia2 + " " + "3) " + dia3;
+
+  console.log(Entrenar);
+} else {
+  console.log("Opción invalidad falta cargar los días de entrenamiento");
+}
