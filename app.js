@@ -18,7 +18,7 @@ let suma = primerProducto + segundoProducto;
 
 alert(suma);
 
-alert("¿Que día se te complica entrenar?");
+alert("¿Que día se te complica entrenar? Apreta ENTER para seguir");
 let dias = prompt(`
 1:Lunes
 2:Martes
