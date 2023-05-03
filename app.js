@@ -75,3 +75,18 @@ if (dia != "" && dia2 != "" && dia3 != "") {
 } else {
   console.log("Opción invalidad falta cargar los días de entrenamiento");
 }
+
+alert(
+  "Ingresa la cantidad de días que deseas entrenar y participa por un descuento exclusivo"
+);
+
+let descuento = parseFloat(
+  prompt("Ingresa cuantas veces por mes deseas entrenar")
+);
+if (descuento >= 1 && descuento <= 8) {
+  alert("Descuento aplica para más cantidad de clases");
+} else if (descuento >= 9 && descuento <= 16) {
+  alert("Tendras un 15% de descuento sobre el valor total de tus clases");
+} else {
+  alert("Opción invalidad");
+}
