@@ -4,19 +4,17 @@ let apellido = prompt("Ingresa tu apellido");
 let edad = prompt("Ingresa tu edad");
 if (edad >= 18) {
   console.log("Eres mayor de edad");
+  alert("Eres mayor de edad puedes continuar");
 } else {
-  console.log("para continar necesitas un adulto mayor");
+  console.warn("para continuar necesitas un adulto mayor");
+  alert("para continuar necesitas un adulto mayor");
+  edad = prompt("Ingrese la edad del responsable");
+  while (edad <= 18) {
+    edad = prompt(
+      "La persona responsable, debe ser mayor de edad, escribir OK"
+    );
+  }
 }
-let primerProducto = Number(
-  prompt("¿Cuantas veces te gustaria entrenar de manera presencial?")
-);
-let segundoProducto = Number(
-  prompt("¿Cuantas clases en linea te gustaria tomar?")
-);
-
-let suma = primerProducto + segundoProducto;
-
-alert(suma);
 
 alert("¿Que día se te complica entrenar? Apreta ENTER para seguir");
 let dias = prompt(`
@@ -80,12 +78,17 @@ alert(
   "Ingresa la cantidad de días que deseas entrenar y participa por un descuento exclusivo"
 );
 
-let descuento = parseFloat(
-  prompt("Ingresa cuantas veces por mes deseas entrenar")
+let primerProducto = Number(
+  prompt("¿Cuantas veces por mes te gustaria entrenar de manera presencial?")
 );
-if (descuento >= 1 && descuento <= 8) {
+let segundoProducto = Number(
+  prompt("¿Cuantas clases por mes en linea te gustaria tomar?")
+);
+let suma = primerProducto + segundoProducto;
+
+if (suma >= 1 && suma <= 8) {
   alert("Descuento aplica para más cantidad de clases");
-} else if (descuento >= 9 && descuento <= 16) {
+} else if (suma >= 9 && suma <= 16) {
   alert("Tendras un 15% de descuento sobre el valor total de tus clases");
 } else {
   alert("Opción invalidad");
